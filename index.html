@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular 1.x with Media Detection</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-app="app">
+    <div ng-controller="MainController">
+        <header>
+            <h1>Angular 1.x with Media Detection</h1>
+        </header>
+        <div class="content">
+            <h2>Hi {{helloTo}}, Welcome to Angular</h2>
+        </div>
+        <div class="content">
+            <hr /><br /><br />
+            <button ng-click="detectMedia()">Detect Media</button>
+            <br /><br />
+            <div ng-if="audioInput.length > 0">
+                Audio Input : <img src="./assets/checkmark.png" alt="Yes" />
+            </div>
+            <div ng-if="audioInput.length === 0">
+                Audio Input : <img src="./assets/cross.png" alt="Yes" />
+            </div>
+            <div ng-if="audioOutput.length > 0">
+                Audio Output :  <img src="./assets/checkmark.png" alt="Yes" />
+            </div>
+            <div ng-if="audioOutput.length === 0">
+                Audio Output :  <img src="./assets/cross.png" alt="Yes" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
