@@ -20,19 +20,13 @@
         </div>
         <div class="content">
             <hr /><br /><br />
-            <button ng-click="detectMedia()">Detect Media</button>
+            <!-- <button ng-click="detectMedia()">Detect Media</button> -->
             <br /><br />
-            <div ng-if="audioInput.length > 0">
-                Audio Input : <img src="./assets/checkmark.png" alt="Yes" />
+            <div id='audioInputDiv'>
+                Audio Input : <img id='audioInput' ng-src="{{audioInputIcon}}"/>
             </div>
-            <div ng-if="audioInput.length === 0">
-                Audio Input : <img src="./assets/cross.png" alt="Yes" />
-            </div>
-            <div ng-if="audioOutput.length > 0">
-                Audio Output :  <img src="./assets/checkmark.png" alt="Yes" />
-            </div>
-            <div ng-if="audioOutput.length === 0">
-                Audio Output :  <img src="./assets/cross.png" alt="Yes" />
+            <div id='audioOutputDiv'>
+                Audio Output :  <img id="audioOutput" ng-src="{{audioOutputIcon}}"/>
             </div>
         </div>
     </div>
